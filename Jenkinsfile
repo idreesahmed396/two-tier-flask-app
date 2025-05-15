@@ -7,7 +7,7 @@ pipeline{
         stage("Code Clone"){
             steps{
                script{
-                   clone("https://github.com/LondheShubham153/two-tier-flask-app.git", "master")
+                   clone("https://github.com/idreesahmed396/two-tier-flask-app.git", "master")
                }
             }
         }
@@ -47,7 +47,7 @@ pipeline{
 post{
         success{
             script{
-                emailext from: 'mentor@trainwithshubham.com',
+                emailext from: 'idrees396@hotmail.com',
                 to: 'mentor@trainwithshubham.com',
                 body: 'Build success for Demo CICD App',
                 subject: 'Build success for Demo CICD App'
@@ -55,7 +55,7 @@ post{
         }
         failure{
             script{
-                emailext from: 'mentor@trainwithshubham.com',
+                emailext from: 'idrees396@hotmail.com',
                 to: 'mentor@trainwithshubham.com',
                 body: 'Build Failed for Demo CICD App',
                 subject: 'Build Failed for Demo CICD App'
